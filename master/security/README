@@ -1,7 +1,0 @@
-
-#########################################
-##### DO NOT TOUCH SECURITY SCRIPTS #####
-#########################################
-
-
-# To update SSH keys use TAR to compress the new key set (with entermedia.conf) and replace the one here with an IDENTICALLY NAMED VERSION.

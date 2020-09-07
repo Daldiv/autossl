@@ -5,6 +5,25 @@ Verified to work on Centos 8 and Let's Encrypt certbot version 1.3.0 with DNSimp
 
 
 
+#####################
+### Installation ####
+#####################
+
+
+
+1. Copy repo to /home/$USER/. or symlink from this folder to your destination folder.
+
+2. Create an unencrypted .TAR file (example: ssh-keys.tar) for your SSH keys and config file, then place under ~/auto-ssl/master/security/. Encryption/decryption with gpg2 is present, though only for advanced users.
+
+3. Create your preffered DNS providers API access token according to your domain provider and certbot's requirements (https://certbot.eff.org/docs/using.html?highlight=dns). Place this token under the ~/auto-ssl/master/domains/. folder and modify the example script to suit your domain provider.
+
+3. Provision the domains you'll be renewing using the same example fscript under ~/auto-ssl/master/domains/. Do the same using the ~/auto-ssl/master/manual/domains-list/. manual intervention example script.
+
+4. Create cron job to run on your schedule by running the ~/auto-ssl/master/master.sh script
+
+Done.
+
+
 
 #####################################
 ##### AUTO-SSL PROGRAM OVERVIEW #####
@@ -26,8 +45,6 @@ Verified to work on Centos 8 and Let's Encrypt certbot version 1.3.0 with DNSimp
 
 
 
-
-#####################################
 ### General Overview of Mechanics ###
 
 # 1. MASTER.SH is activated and creates logging parameters.
@@ -56,26 +73,4 @@ Verified to work on Centos 8 and Let's Encrypt certbot version 1.3.0 with DNSimp
 
 # 13. MASTER.SH terminates.
 
-
-
-
-
-#####################
-### Installation ####
-#####################
-
-
-
-
-1. Copy repo to /home/$USER/. or symlink from this folder to your destination folder.
-
-2. Create an unencrypted .TAR file (example: ssh-keys.tar) for your SSH keys and config file, then place under ~/auto-ssl/master/security/. Encryption/decryption with gpg2 is present, though only for advanced users.
-
-3. Create your preffered DNS providers API access token according to your domain provider and certbot's requirements (https://certbot.eff.org/docs/using.html?highlight=dns). Place this token under the ~/auto-ssl/master/domains/. folder and modify the example script to suit your domain provider.
-
-3. Provision the domains you'll be renewing using the same example fscript under ~/auto-ssl/master/domains/. Do the same using the ~/auto-ssl/master/manual/domains-list/. manual intervention example script.
-
-4. Create cron job to run on your schedule by running the ~/auto-ssl/master/master.sh script
-
-Done.
 

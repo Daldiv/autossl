@@ -1,7 +1,7 @@
 # autossl
 Automated Let's Encrypt SSL cert provisioning and remote distribution in BASH. Supports DNS verified wildcard certififcates with certbot as the mitochondria.
 
-Verified to work on Centos 8 and Let's Encrypt certbot version 1.3.0 with DNSimple's DNS API. This script is compatible with all supported certbot domain API (AWS, DO, etc) options with minor adjustments.
+Verified to work on Centos 8 and Let's Encrypt certbot version 1.3.0 with DNSimple's DNS API. This script is compatible with all supported certbot domain API (AWS, DO, etc) options with minor adjustments. Further details are in the varying folder's README files.
 
 
 

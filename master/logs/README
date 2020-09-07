@@ -1,0 +1,26 @@
+
+###########################################################
+##### LOG FILES FOR ALL OPERATIONS EXCEPT MANUAL MODE #####
+###########################################################
+
+
+RUN = /RUN.SH
+MASTER = /MASTER.SH
+SECURITY = /security/SECURITY.SH
+RENEW = /domains/$DOMAIN.SH
+DEPLOY = /domains/deploy/DEPLOY.SH	
+CLEANUP = /security/SECURITY.SH
+AUDIT = /AUDIT.SH
+
+
+### Log Structure ###
+
+# {DOMAINS} folder contains logs for RENEW and DEPLOY operations.
+
+# {LETSENCRYPT} folder contains logs only for direct CERTBOT actions through AUTO-SSL/$DOMAIN.SH script!
+
+# {RUN} folder contains logs for RUN and MASTER operations.
+
+# {SECURITY} contains logs for SECURITY and CLEANUP operations.
+
+# {AUDIT} contains logs for AUDIT script.

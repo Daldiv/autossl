@@ -34,7 +34,7 @@ Done.
 
 # This script is triggered by a cron job every 58 days. This job is manually set by the user.
 # If it fails then the AUDIT.SH script prints a message visible to all who log on to the server.
-# If 60 days have passed since last renewal Letsencrypt sends and email to the email registered with Let's Encrypt at setup.
+# If 60 days have passed since last renewal Lets Encrypt sends and email to the email registered with Let's Encrypt at setup.
 
 
 

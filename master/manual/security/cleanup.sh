@@ -9,7 +9,6 @@
 ###################################
 ### Removes SSH keys and config ###
 
-
 # Time stamp.
 NOW=$(date +"%m-%d-%Y")
 

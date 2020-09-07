@@ -4,9 +4,13 @@ Automated Let's Encrypt SSL cert provisioning and remote distribution in BASH. S
 Verified to work on Centos 8 and Let's Encrypt certbot version 1.3.0 with DNSimple's DNS API. This script is compatible with all supported certbot domain API (AWS, DO, etc) options with minor adjustments.
 
 
+
+
 #####################################
 ##### AUTO-SSL PROGRAM OVERVIEW #####
 #####################################
+
+
 
 
 # This script is triggered by a cron job every 58 days. This job is manually set by the user.
@@ -14,9 +18,13 @@ Verified to work on Centos 8 and Let's Encrypt certbot version 1.3.0 with DNSimp
 # If 60 days have passed since last renewal Letsencrypt sends and email to the email registered with Let's Encrypt at setup.
 
 
+
+
 ##########################################################################
 ### IF YOU NEED TO RUN THIS MANUALLY, GOT TO THE ./MANUAL/MASTER.SH !! ###
 ##########################################################################
+
+
 
 
 #####################################
@@ -50,9 +58,13 @@ Verified to work on Centos 8 and Let's Encrypt certbot version 1.3.0 with DNSimp
 
 
 
+
+
 #####################
 ### Installation ####
 #####################
+
+
 
 
 1. Copy repo to /home/$USER/. or symlink from this folder to your destination folder.

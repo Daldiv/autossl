@@ -1,0 +1,47 @@
+#####################################
+##### AUTO-SSL PROGRAM OVERVIEW #####
+#####################################
+
+
+# This script is triggered by a cron job every 58 days. 
+# If it fails then the AUDIT.SH script prints a message visible to all who log on to the host server.
+# If 60 days have passed since last renewal Letsencrypt sends and email to the registered Let's Encrypt email.
+
+
+#########################################################################
+### IF YOU NEED TO RUN THIS MANUALLY, GOTTO THE ./MANUAL/MASTER.SH !! ###
+#########################################################################
+
+
+#####################################
+### General Overview of Mechanics ###
+
+# 1. MASTER.SH is activated and creates logging parameters.
+
+# 2. MASTER.SH backs up "/home/$USER/auto-ssl/master" folder to "/home/$USER/ssl-backup" folder.
+
+# 3. MASTER.SH script triggers ./security/SECURITY.SH that deploys SSH keys and config.
+
+# 4. MASTER.SH checks integrity of AUTO-SSL folder structures.
+
+# 5. MASTER.SH script triggers LOOP for ./domains/$DOMAIN.SH script for each domain configured in ./deploy/ folder.
+
+	# 6. $DOMAIN.SH runs certbot renew for only that domain.
+	
+	# 7. $DOMAIN.SH breaks the chain for $DEPLOY if SSL renewal fails, only for this domain; and calls the AUDIT.SH script to log and warn..
+
+	# 8. $DOMAIN.SH script triggers $DEPLOY.SH script to install on other relevant servers.
+
+		# 9. $DEPLOY.SH cleans preconfigured $SERVER AUTO-SSL staging folder to insure success.
+
+		# 10. $DEPLOY.SH rsyncs $DOMAIN SSL folder and certs to staging folder.
+
+		# 11. $DEPLOY.SH installs SSL to Letsencrypt folder on $SERVER and cleans staging folder of secrets.
+
+# 12. MASTER.SH triggers ./security/CLEANUP.SH that insures no SSH keys are laying around.
+
+# 13. MASTER.SH terminates.
+
+
+
+

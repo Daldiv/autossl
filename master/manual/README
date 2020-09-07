@@ -1,0 +1,29 @@
+#########################################################################################
+### THIS IS THE MANUAL VERSION OF THE AUTO-SSL PROGRAM, TO BE RAN ONLY IN EMERGENCIES ###
+#########################################################################################
+
+
+# This is the LOG neutered version so you may see the progress on the console instead of the "logs" folder. 
+# DO NOT REMOVE ANYTHING, [ONLY COPY], YOU HAVE BEEN WARNED.
+
+
+####################
+### INSTRUCTIONS ###
+
+# 1. {COPY} the required domain(s) script from the "./domain-list" folder to the "./domains" folder.
+
+# 2. Modify the copied scripts as necessary to fit your $SERVERS & $DOMAIN conditions.
+
+# 3. Make sure there is a "deploy.sh" and a "dnsimple.ini" files in the "./domains" folder. There is a backup in ./domains-list
+
+# 4. Run the "master.sh" script as a SUDOER USER. NO SUDO in the command itself. Check Console Output for any critical errors! Some errors pertaining to "shred" are ok. Double check!!
+
+# 5. Run the "cleanup.sh" script
+
+
+##############
+### NOTES ####
+
+# IF YOU NEED ANOTHER DOMAIN NOT IN THE "DOMAINS-LIST" FOLDER THEN JUST COPY ANY AND CHANGE THE $SERVER AND THE $DOMAIN VARIABLE TO MATCH THE NEED!!!
+
+# The "test-scripts" folder is for development or last resource use only!
